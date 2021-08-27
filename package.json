@@ -1,0 +1,35 @@
+{
+  "name": "methods",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "lint": "eslint src/js/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pfokin92/methods.git"
+  },
+  "author": "pfokin92",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pfokin92/methods/issues"
+  },
+  "homepage": "https://github.com/pfokin92/methods#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.14.8",
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2",
+    "jest": "^27.0.6",
+    "webpack": "^5.51.1",
+    "webpack-cli": "^4.8.0"
+  },
+  "dependencies": {
+    "core-js": "^3.16.3"
+  }
+}
