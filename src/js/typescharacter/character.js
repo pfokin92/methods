@@ -1,17 +1,18 @@
-﻿export default class Character {
-  constructor(name, type, health, level, attack, defence) {
-    this.name = name;
-    this.type = type;
-    this.health = health;
-    this.level = level;
-    this.attack = attack;
-    this.defence = defence;
-    if ((typeof (this.name) !== 'string') && this.name.length < 2 && this.name.length > 10) {
-      throw new Error('Ошибка. Имя не может быть таким ');
+﻿const typesArray = ['Bowman','Swordsman','Magician','Daemon','Undead','Zombie'];
+export default class Character {
+  constructor(name, type) {
+    if ((typeof (name) !== 'string') || name.length < 2 || name.length > 10) {
+      throw new Error('Ошибка. Имя не может быть таким');
+    } else {
+      this.name = name;
     }
-    if (this.type !== 'Bowman' && this.type !== 'Swordsman' && this.type !== 'Magician' && this.type !== 'Daemon' && this.type !== 'Undead' && this.type !== 'Zombie') {
+    if (typesArray.includes(type)) {
+      this.type = type;
+    } else {
       throw new Error('Ошибка. Не верно выбран тип');
     }
+    this.health = 100;
+    this.level = 1;
   }
 
   levelUp() {
